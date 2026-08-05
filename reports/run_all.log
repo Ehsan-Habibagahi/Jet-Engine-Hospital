@@ -1,0 +1,87 @@
+
+======================================================================
+  FD001
+======================================================================
+
+======================================================================
+  FD002
+======================================================================
+
+======================================================================
+  FD003
+======================================================================
+
+======================================================================
+  FD004
+======================================================================
+
+--- MASTER COMPARISON ---
+  subset  n_conditions  n_fault_modes tag                                                           role  n_features  rul_cap   rul_model  test_MAE  test_RMSE  test_PHM_mean  interval_coverage  interval_width  PR_AUC_h10  PR_AUC_h20  PR_AUC_h30  anomaly_detector  policy_avg_cost  policy_miss_rate  policy_mean_lead_time  runtime_s
+0  FD001             1              1   -                    Stage 1 - foundation (1 condition, 1 fault)         201      130  hgb_window  8.213867  12.209068       2.377302           0.932880       36.857854    0.695293    0.884071    0.933966  isolation_forest        31.312500               0.0              51.312500       65.2
+1  FD002             6              1   -  Stage 2 alternative - condition shift (6 conditions, 1 fault)         277      110  hgb_window  5.987935   9.643752       1.345373           0.917949       28.775507    0.686943    0.880693    0.941452             ocsvm        38.716981               0.0              58.716981      184.2
+2  FD003             1              2   -                  Stage 2 - multi-fault (1 condition, 2 faults)         229      125  hgb_window  5.214711   9.386314       1.768544           0.933357       27.725643    0.646254    0.901173    0.947608               lof        32.785714               0.0              52.785714       73.7
+3  FD004             6              2   -            Bonus - combined challenge (6 conditions, 2 faults)         277      125  hgb_window  6.690595  12.181381      10.220644           0.912505       31.380279    0.353065    0.738679    0.833680             ocsvm        31.275000               0.0              51.275000      200.5
+
+======================================================================
+  ABLATIONS -- FD001
+======================================================================
+                  variant                                                                                   question  n_features  rul_cap   test_MAE  test_RMSE  test_PHM_mean  interval_coverage  interval_width  PR_AUC_h10  PR_AUC_h20  PR_AUC_h30  policy_avg_cost  policy_miss_rate  policy_mean_lead_time  delta_test_MAE  delta_PR_AUC_h20  delta_policy_cost
+0  full model (reference)                                                                                          -         201      130   8.213867  12.209068       2.377302           0.932880       36.857854    0.695293    0.884071    0.933966          31.3125               0.0                51.3125        0.000000          0.000000             0.0000
+1          no_op_settings    Do the three operating settings carry information beyond what the sensors already show?         198      130   8.220752  12.186016       2.360475           0.941432       36.912100    0.705873    0.881168    0.935918          31.7500               0.0                51.7500        0.006885         -0.002903             0.4375
+2       no_trend_features  Are slope / EWM / diff / drift features earning their place, or do rolling means suffice?         131      130  10.690507  16.226456       5.323347           0.928757       42.510862    0.881844    0.878194    0.903486          35.5000               0.0                55.5000        2.476640         -0.005877             4.1875
+3            short_window                                           How much does the trailing window length matter?         201      130   7.736459  11.750329       2.354480           0.933491       36.958576    0.836810    0.905702    0.918816          32.6875               0.0                52.6875       -0.477408          0.021632             1.3750
+
+======================================================================
+  ABLATIONS -- FD004
+======================================================================
+[FD004_global_scaling] engines train/val/test = 174/75/248; rows 41713/19536/41214
+[FD004_global_scaling] features: 277 columns (20.8s); dropped 2 sensors
+[FD004_global_scaling] RUL cap = 125 (median RUL at degradation onset on training engines)
+[FD004_global_scaling] best regressor on validation (MAE): rf_current
+[FD004_global_scaling] done in 168.5s
+                  variant                                                                                           question  n_features  rul_cap  test_MAE  test_RMSE  test_PHM_mean  interval_coverage  interval_width  PR_AUC_h10  PR_AUC_h20  PR_AUC_h30  policy_avg_cost  policy_miss_rate  policy_mean_lead_time  delta_test_MAE  delta_PR_AUC_h20  delta_policy_cost
+0  full model (reference)                                                                                                  -         277      125  6.690595  12.181381      10.220644           0.912505       31.380279    0.353065    0.738679    0.833680           31.275               0.0                 51.275        0.000000          0.000000              0.000
+1          no_op_settings            Do the three operating settings carry information beyond what the sensors already show?         268      125  6.657852  12.128861      10.264387           0.896467       31.861786    0.353313    0.732017    0.829393           30.050               0.0                 50.050       -0.032743         -0.006663             -1.225
+2       no_trend_features          Are slope / EWM / diff / drift features earning their place, or do rolling means suffice?         182      125  9.256901  15.235442      12.814740           0.898894       36.416832    0.336728    0.681194    0.768748           31.250               0.0                 51.250        2.566306         -0.057485             -0.025
+3            short_window                                                   How much does the trailing window length matter?         277      125  6.437606  11.861584      11.038121           0.919712       32.209170    0.334519    0.714651    0.828229           32.550               0.0                 52.550       -0.252989         -0.024028              1.275
+4          global_scaling  Does regime-aware normalisation beat one global scaler? (only meaningful for 6-condition subsets)         277      125  9.739666  15.404213      11.777087           0.897608       51.432319    0.310552    0.696794    0.735060           90.150               0.0                110.150        3.049071         -0.041886             58.875
+
+======================================================================
+  BONUS -- FD004
+======================================================================
+
+--- fd004_per_regime ---
+   regime  n_rows  n_engines  share_of_rows       MAE       RMSE  PHM_score_mean  PR_AUC_h10  PR_AUC_h20  PR_AUC_h30  mean_anomaly_percentile  anomaly_alert_rate_at_deployed_threshold
+0       0    6054        248       0.146892  6.785285  12.671136       17.018912    0.185714    0.683767    0.843371                 0.313153                                  0.012884
+1       1    6232        248       0.151211  6.674402  12.213599        9.213175    0.549037    0.739390    0.828908                 0.362156                                  0.013960
+2       2    6107        248       0.148178  6.788927  11.913129        7.670637    0.203704    0.789808    0.845329                 0.442939                                  0.012936
+3       3    6254        248       0.151745  6.553906  12.060321        9.283936    0.450200    0.782389    0.840922                 0.423492                                  0.015030
+4       4    6185        248       0.150070  6.692358  12.208530        7.846552    0.760000    0.816294    0.856320                 0.435135                                  0.012288
+5       5   10382        248       0.251905  6.668547  12.082713       10.339761    0.369072    0.710571    0.814194                 0.375591                                  0.014255
+
+--- fd004_threshold_stability ---
+   regime  global_threshold  regime_specific_threshold  relative_gap_%  test_alert_rate_global_thr  test_alert_rate_regime_thr  n_val_rows  n_test_rows  alert_rate_spread_across_regimes
+0       0            5.4912                     5.3237            -3.1                    0.012884                    0.013875        2946         6054                            0.0027
+1       1            5.4912                     5.3759            -2.1                    0.013960                    0.014442        2923         6232                            0.0027
+2       2            5.4912                     5.3593            -2.4                    0.012936                    0.013755        2910         6107                            0.0027
+3       3            5.4912                     5.8165             5.9                    0.015030                    0.012632        2912         6254                            0.0027
+4       4            5.4912                     5.7440             4.6                    0.012288                    0.011641        2901         6185                            0.0027
+5       5            5.4912                     5.2360            -4.6                    0.014255                    0.015797        4944        10382                            0.0027
+
+--- fd004_slices ---
+                 slice_type                               slice  n_rows        MAE       RMSE        R2  PHM_score_total  PHM_score_mean  bias_mean_error  late_fraction
+0  observed sequence length  sequence length (117.333, 195.667]   12647   8.659375  13.545881  0.804593     48145.787047        3.806894         0.994960       0.295485
+1  observed sequence length   sequence length (18.999, 117.333]    6195   6.431523  11.602651  0.479206     17371.496866        2.804116        -0.354314       0.174334
+2  observed sequence length    sequence length (195.667, 486.0]   22372   5.649373  11.504461  0.760453    355716.346053       15.900069        -3.332854       0.121089
+3                RUL region                        near-failure     811   5.317035   7.127409 -0.516066       760.841203        0.938152         3.607121       0.689273
+4                RUL region                            mid-life    4187  14.035933  18.592764 -0.726158     41094.702158        9.814832        11.110591       0.752329
+5                RUL region                          early-life   36216   5.872145  11.303121 -0.300262    379378.086606       10.475428        -3.137280       0.105395
+
+--- fd004_transfer ---
+  source_model                                                    source_role target_test_set  dedicated  rul_cap_used        MAE       RMSE  PHM_score_mean  PR_AUC_h10  PR_AUC_h20  PR_AUC_h30
+3        FD004            Bonus - combined challenge (6 conditions, 2 faults)           FD004       True           125   6.690595  12.181381       10.220644    0.353065    0.738679    0.833680
+1        FD002  Stage 2 alternative - condition shift (6 conditions, 1 fault)           FD004      False           110   7.477397  12.273083        4.803887    0.009326    0.224597    0.260046
+2        FD003                  Stage 2 - multi-fault (1 condition, 2 faults)           FD004      False           125  34.316434  42.216657      103.373317    0.001050    0.009270    0.021469
+0        FD001                    Stage 1 - foundation (1 condition, 1 fault)           FD004      False           130  42.350915  46.185526       62.659009    0.001265    0.009108    0.021150
+
+TOTAL 279s

@@ -1,13 +1,3 @@
----
-title: Jet Engine Hospital
-emoji: 🛩️
-colorFrom: blue
-colorTo: red
-sdk: streamlit
-sdk_version: "1.30.0"
-app_file: app/app.py
-pinned: false
----
 # Jet Engine Hospital: Predicting Failure Before It Happens
 
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
