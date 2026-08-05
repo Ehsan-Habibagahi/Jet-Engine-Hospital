@@ -1,0 +1,4 @@
+RUL_true,RUL_pred,d = pred - true,phm_score,interpretation
+30.0,40.0,10.0,1.7183,overestimate by 10 (LATE warning)
+30.0,20.0,-10.0,1.1581,underestimate by 10 (EARLY warning)
+30.0,30.0,0.0,0.0,exact

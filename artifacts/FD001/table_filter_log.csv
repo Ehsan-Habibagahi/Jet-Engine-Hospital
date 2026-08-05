@@ -1,0 +1,10 @@
+decision,rationale,engines_affected,rows_affected,columns_affected,detail
+keep all engines,no engine has missing/non-finite values or duplicate keys,0,0,0,
+drop sensor_1,near-constant on TRAIN engines (std<1e-6 or <=2 levels),0,0,1,
+drop sensor_5,near-constant on TRAIN engines (std<1e-6 or <=2 levels),0,0,1,
+drop sensor_6,near-constant on TRAIN engines (std<1e-6 or <=2 levels),0,0,1,
+drop sensor_10,near-constant on TRAIN engines (std<1e-6 or <=2 levels),0,0,1,
+drop sensor_16,near-constant on TRAIN engines (std<1e-6 or <=2 levels),0,0,1,
+drop sensor_18,near-constant on TRAIN engines (std<1e-6 or <=2 levels),0,0,1,
+drop sensor_19,near-constant on TRAIN engines (std<1e-6 or <=2 levels),0,0,1,
+anomaly fitting set,"first 30 cycles of TRAIN engines only (no failure label, no test row)",0,2100,0,

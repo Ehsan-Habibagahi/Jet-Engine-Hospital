@@ -1,0 +1,2 @@
+train_engines_analysed,onset_detected,onset_not_detected,RUL_at_onset_p25,RUL_at_onset_median,RUL_at_onset_p75,cap_selected,rule
+70,70,0,109.0,130.5,153.5,130,"median RUL at degradation onset (3-sigma over the engine's own first-30-cycle baseline, persistent 3-of-5), snapped to the grid"

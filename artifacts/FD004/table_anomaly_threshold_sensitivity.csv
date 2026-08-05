@@ -1,0 +1,7 @@
+detector,val_percentile_threshold,n_engines_at_risk,miss_rate,mean_lead_time,median_lead_time,mean_late_delay,mean_early_burden,cost_component_miss,cost_component_late,cost_component_early,avg_cost_per_engine,false_alert_rate_per_healthy_cycle
+ocsvm,0.8,40,0.1,38.69444444444444,31.5,0.55,17.375,20.0,2.75,17.375,40.125,0.05137120470127326
+ocsvm,0.9,40,0.525,22.36842105263158,17.0,1.75,2.875,105.0,8.75,2.875,116.625,0.010577864838393732
+ocsvm,0.95,40,0.825,21.285714285714285,16.0,0.625,0.85,165.0,3.125,0.85,168.975,0.00232615083251714
+ocsvm,0.975,40,0.925,24.0,21.0,0.0,0.3,185.0,0.0,0.3,185.3,0.0006121449559255632
+ocsvm,0.99,40,0.975,14.0,14.0,0.15,0.0,195.0,0.75,0.0,195.75,0.0
+ocsvm,0.995,40,1.0,,,0.0,0.0,200.0,0.0,0.0,200.0,0.0

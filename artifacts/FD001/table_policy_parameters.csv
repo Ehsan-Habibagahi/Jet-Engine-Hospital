@@ -1,0 +1,12 @@
+parameter,value
+p10_stop,0.03
+p20_inspect,0.01
+p30_inspect,0.015
+rul_lo_stop,15.0
+rul_lo_inspect,45.0
+anomaly_persist_level,0.925
+anomaly_persist_m,3.0
+anomaly_persist_n,5.0
+wide_interval_cycles,54.30343262914345
+review_fraction,0.3
+min_review_cycles,5.0

@@ -1,0 +1,7 @@
+alert_source,n_engines_at_risk,miss_rate,mean_lead_time,median_lead_time,mean_late_delay,mean_early_burden,cost_component_miss,cost_component_late,cost_component_early,avg_cost_per_engine,false_alert_rate_per_healthy_cycle
+classifier_h20,16,0.0,25.25,24.0,0.0625,5.3125,0.0,0.3125,5.3125,5.625,0.011947891775225468
+classifier_h30,16,0.0,32.875,33.0,0.0,12.875,0.0,0.0,12.875,12.875,0.028289524396824174
+decision_policy_INSPECT_or_STOP,16,0.0,51.3125,49.0,0.0,31.3125,0.0,0.0,31.3125,31.3125,0.0725352655515301
+decision_policy_STOP,16,0.3125,19.0,19.0,1.25,0.5625,62.5,6.25,0.5625,69.3125,0.0030062437369922147
+classifier_h10,16,0.4375,13.333333333333334,12.0,3.75,0.0,87.5,18.75,0.0,106.25,0.00030833269097356046
+anomaly_isolation_forest,16,0.5625,26.0,20.0,1.125,3.75,112.5,5.625,3.75,121.875,0.010637477838587836

@@ -1,0 +1,11 @@
+/tools
+/*.pdf
+/*.zip
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+__pycache__/
+.pytest_cache/
+notebooks/
+artifacts/_cache/*.joblib

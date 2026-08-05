@@ -1,0 +1,7 @@
+check,result
+engine ids disjoint across train/val,PASS
+test engines come from the official test file only,PASS
+preprocessing fitted on TRAIN engines only,PASS
+features at cycle 161 unchanged by later rows (engine 1),PASS
+windows built inside each split (per-engine groupby),PASS
+thresholds/calibration/conformal fitted on VALIDATION engines,PASS

@@ -1,0 +1,7 @@
+method,set,nominal_coverage,split_conformal_q_cycles,cqr_correction_cycles,coverage,mean_width,median_width,lower_violation_rate,upper_violation_rate
+"split conformal (|residual|, constant width)",validation (used for calibration),0.9,18.86,1.03,0.900375939849624,36.995299188225395,37.72853751495131,0.0764893001735107,0.02313475997686524
+"split conformal (|residual|, constant width)",test (held out),0.9,18.86,1.03,0.9278741865509761,37.69992904113971,37.72853751495131,0.04211858279103398,0.030007230657989877
+"split conformal (|residual|, constant width)","test, last cycle only",0.9,18.86,1.03,0.89,36.885786243902736,37.72853751495131,0.08,0.03
+CQR (adaptive width) -- DEPLOYED,validation (used for calibration),0.9,18.86,1.03,0.9047137073452863,32.89931846480729,29.933719411299684,0.07417582417582418,0.021110468478889532
+CQR (adaptive width) -- DEPLOYED,test (held out),0.9,18.86,1.03,0.933357435526633,27.725643462675883,23.97142585756061,0.046577488551458185,0.020065075921908895
+CQR (adaptive width) -- DEPLOYED,"test, last cycle only",0.9,18.86,1.03,0.89,40.24330211532245,41.15304609614664,0.08,0.03

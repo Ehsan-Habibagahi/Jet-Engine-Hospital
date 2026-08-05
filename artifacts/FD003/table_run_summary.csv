@@ -1,0 +1,2 @@
+subset,tag,role,n_features,rul_cap,rul_model,test_MAE,test_RMSE,test_PHM_mean,interval_coverage,interval_width,PR_AUC_h10,PR_AUC_h20,PR_AUC_h30,anomaly_detector,policy_avg_cost,policy_miss_rate,policy_mean_lead_time,runtime_s
+FD003,-,"Stage 2 - multi-fault (1 condition, 2 faults)",229,125,hgb_window,5.2147106386284285,9.386313678609683,1.7685436443310296,0.933357435526633,27.725643462675883,0.6462536202426042,0.9011733023024358,0.9476077662472846,lof,32.785714285714285,0.0,52.785714285714285,73.7

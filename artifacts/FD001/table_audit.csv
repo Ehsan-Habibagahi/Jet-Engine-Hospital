@@ -1,0 +1,6 @@
+frame,rows,engines,min_len,median_len,max_len,"duplicate_(engine,cycle)",missing_values,non_finite_values,engines_with_continuous_cycles,engines_starting_at_cycle_1
+FD001 official train,20631,100,128,199.0,362,0,0,0,100,100
+FD001 official test,13096,100,31,133.5,303,0,0,0,100,100
+TRAIN engines,14908,70,128,201.5,362,0,0,0,70,70
+VALIDATION engines,5723,30,137,194.5,283,0,0,0,30,30
+TEST engines,13096,100,31,133.5,303,0,0,0,100,100

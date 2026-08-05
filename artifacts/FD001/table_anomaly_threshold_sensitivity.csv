@@ -1,0 +1,7 @@
+detector,val_percentile_threshold,n_engines_at_risk,miss_rate,mean_lead_time,median_lead_time,mean_late_delay,mean_early_burden,cost_component_miss,cost_component_late,cost_component_early,avg_cost_per_engine,false_alert_rate_per_healthy_cycle
+isolation_forest,0.8,16,0.125,63.857142857142854,53.5,0.0,38.375,25.0,0.0,38.375,63.375,0.06914360595082093
+isolation_forest,0.9,16,0.5,35.625,35.5,0.0,7.8125,100.0,0.0,7.8125,107.8125,0.01803746242195329
+isolation_forest,0.95,16,0.875,22.0,22.0,0.375,0.625,175.0,1.875,0.625,177.5,0.004085408155399676
+isolation_forest,0.975,16,1.0,,,0.0,0.0,200.0,0.0,0.0,200.0,0.0008479149001772913
+isolation_forest,0.99,16,1.0,,,0.0,0.0,200.0,0.0,0.0,200.0,0.00023124951823017036
+isolation_forest,0.995,16,1.0,,,0.0,0.0,200.0,0.0,0.0,200.0,0.00015416634548678023

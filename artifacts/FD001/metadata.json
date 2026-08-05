@@ -1,0 +1,74 @@
+{
+  "dataset": "FD001",
+  "role": "Stage 1 - foundation (1 condition, 1 fault)",
+  "model_version": "1.0.0",
+  "seed": 42,
+  "feature_window": [
+    5,
+    15,
+    30
+  ],
+  "primary_window": 30,
+  "n_features": 201,
+  "rul_cap": 130,
+  "conformal_alpha": 0.1,
+  "conformal_q_cycles": 21.67,
+  "rul_model": "hgb_window",
+  "anomaly_detector": "isolation_forest",
+  "classifier_per_horizon": {
+    "10": "logreg_window",
+    "20": "logreg_window",
+    "30": "logreg_window"
+  },
+  "classifier": "h10:logreg_window, h20:logreg_window, h30:logreg_window",
+  "condition_aware": false,
+  "n_conditions": 1,
+  "engines": {
+    "train": 70,
+    "val": 30,
+    "test": 100
+  },
+  "cost_policy": {
+    "c_miss": 200.0,
+    "c_late": 5.0,
+    "c_early": 1.0,
+    "target_horizon": 20
+  },
+  "decision_thresholds": {
+    "10": 0.03,
+    "20": 0.01,
+    "30": 0.015
+  },
+  "trained_at": "2026-07-31 19:18:00",
+  "tables": [
+    "action_confusion",
+    "anomaly_comparison",
+    "anomaly_design",
+    "anomaly_threshold_selection_validation",
+    "anomaly_threshold_sensitivity",
+    "audit",
+    "calibration_effect",
+    "class_balance",
+    "classification_bootstrap_ci",
+    "classification_test",
+    "classification_validation",
+    "early_warning",
+    "early_warning_validation",
+    "filter_log",
+    "interval_report",
+    "interval_width_spread",
+    "leakage_checks",
+    "phm_sign_convention",
+    "policy_cost_ci",
+    "policy_parameters",
+    "regression_bootstrap_ci",
+    "regression_by_region",
+    "regression_last_cycle",
+    "regression_test",
+    "regression_validation",
+    "rul_cap_onset",
+    "rul_cap_sensitivity",
+    "run_summary",
+    "sensor_variance"
+  ]
+}

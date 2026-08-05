@@ -1,0 +1,2 @@
+subset,tag,role,n_features,rul_cap,rul_model,test_MAE,test_RMSE,test_PHM_mean,interval_coverage,interval_width,PR_AUC_h10,PR_AUC_h20,PR_AUC_h30,anomaly_detector,policy_avg_cost,policy_miss_rate,policy_mean_lead_time,runtime_s
+FD001,-,"Stage 1 - foundation (1 condition, 1 fault)",201,130,hgb_window,8.213866816013114,12.209068282609211,2.377302303735857,0.9328802687843616,36.857853582783626,0.6952932800802982,0.8840707397058306,0.9339655695023561,isolation_forest,31.3125,0.0,51.3125,65.2

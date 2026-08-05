@@ -1,0 +1,4 @@
+true_state,CONTINUE,INSPECT,STOP
+at risk (RUL<=20),0,140,193
+critical (RUL<=10),0,0,41
+healthy,38187,2569,84

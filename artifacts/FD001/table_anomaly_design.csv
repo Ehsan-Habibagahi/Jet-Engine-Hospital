@@ -1,0 +1,5 @@
+detector,design_choice,fit_rows,fit_seconds,score_ms_per_1k_rows,val_threshold_p99
+isolation_forest,"contamination=0.02, fit on healthy head rows",2100,0.304,10.838,0.0772
+lof,"novelty=True, n_neighbors=35",2100,0.065,30.694,3.7099
+ocsvm,"rbf kernel, nu=0.05, gamma='scale', whitened PCA input",2100,0.009,5.696,4.5337
+pca_recon,k=14 components (95% healthy variance),2100,0.001,0.348,0.5061

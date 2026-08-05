@@ -1,0 +1,2 @@
+subset,tag,role,n_features,rul_cap,rul_model,test_MAE,test_RMSE,test_PHM_mean,interval_coverage,interval_width,PR_AUC_h10,PR_AUC_h20,PR_AUC_h30,anomaly_detector,policy_avg_cost,policy_miss_rate,policy_mean_lead_time,runtime_s
+FD004,-,"Bonus - combined challenge (6 conditions, 2 faults)",277,125,hgb_window,6.690594985574868,12.18138093505535,10.2206441977593,0.9125054593099432,31.3802791951354,0.35306526953277867,0.7386792379044316,0.833680479120938,ocsvm,31.275,0.0,51.275,200.5

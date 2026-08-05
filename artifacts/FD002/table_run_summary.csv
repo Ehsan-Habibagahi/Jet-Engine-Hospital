@@ -1,0 +1,2 @@
+subset,tag,role,n_features,rul_cap,rul_model,test_MAE,test_RMSE,test_PHM_mean,interval_coverage,interval_width,PR_AUC_h10,PR_AUC_h20,PR_AUC_h30,anomaly_detector,policy_avg_cost,policy_miss_rate,policy_mean_lead_time,runtime_s
+FD002,-,"Stage 2 alternative - condition shift (6 conditions, 1 fault)",277,110,hgb_window,5.987935380974297,9.64375211791456,1.3453726393772,0.9179488688182166,28.7755073161304,0.6869431951742508,0.8806930475298851,0.9414519576143434,ocsvm,38.716981132075475,0.0,58.716981132075475,184.2
