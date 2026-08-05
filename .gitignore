@@ -8,3 +8,17 @@ __pycache__/
 __pycache__/
 .pytest_cache/
 artifacts/_cache/*.joblib
+
+# LaTeX build artifacts
+reports/doc/*.aux
+reports/doc/*.bbl
+reports/doc/*.bcf
+reports/doc/*.blg
+reports/doc/*.log
+reports/doc/*.out
+reports/doc/*.run.xml
+reports/doc/*.synctex.gz
+reports/doc/*.toc
+reports/doc/*.fls
+reports/doc/*.fdb_latexmk
+reports/run_all.log
