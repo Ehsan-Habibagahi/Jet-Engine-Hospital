@@ -13,6 +13,8 @@ maintenance policy tuned under an explicit asymmetric cost.
 
 Machine Learning capstone, Shahid Beheshti University, Spring 2026
 
+**[Live dashboard](https://jet-engine-hospital-jeh.streamlit.app)** | **[Full technical report](reports/doc/report.pdf)**
+
 | Stage | Subset | Challenge |
 |---|---|---|
 | 1, Foundation | **FD001** | 1 operating condition, 1 fault mode |
