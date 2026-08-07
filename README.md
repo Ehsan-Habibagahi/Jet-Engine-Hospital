@@ -6,6 +6,11 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Type](https://img.shields.io/badge/type-ML%20capstone-purple)
 
+
+
+https://github.com/user-attachments/assets/ccd81dd2-f566-44f1-b604-8ea8f518d376
+
+
 A multi-task early-warning system for NASA C-MAPSS turbofan engines. It combines **RUL
 regression** with a calibrated prediction interval, **failure-horizon classification** at
 10/20/30 cycles, **unsupervised anomaly detection**, and a **CONTINUE / INSPECT / STOP**
