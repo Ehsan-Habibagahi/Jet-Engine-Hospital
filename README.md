@@ -1,10 +1,13 @@
-# Jet Engine Hospital: Predicting Failure Before It Happens
-
+# ✈️ Jet Engine Hospital: Predicting Failure Before It Happens
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Streamlit](https://img.shields.io/badge/streamlit-dashboard-ff4b4b)
 ![pytest](https://img.shields.io/badge/tests-pytest-0a9edc)
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Type](https://img.shields.io/badge/type-ML%20capstone-purple)
+[![Live dashboard](https://img.shields.io/badge/dashboard-live-ff4b4b?logo=streamlit&logoColor=white)](https://jet-engine-hospital-jeh.streamlit.app)
+[![Technical report](https://img.shields.io/badge/report-PDF-8b1a1a?logo=adobeacrobatreader&logoColor=white)](reports/doc/report.pdf)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Tests](https://github.com/Ehsan-Habibagahi/Jet-Engine-Hospital/actions/workflows/tests.yml/badge.svg)](https://github.com/Ehsan-Habibagahi/Jet-Engine-Hospital/actions/workflows/tests.yml)
 
 <div align="center">
   <img width="100%" alt="jeh" src="https://github.com/user-attachments/assets/89182539-4455-4a97-98f7-36628708a553" />
@@ -26,7 +29,7 @@ maintenance policy tuned under an explicit asymmetric cost.
 | 4. Advanced | FD004 | 6 conditions + 2 fault modes |
 
 ---
-## Dataset Description
+## 🗃️ Dataset Description
 
 **What "FDXXX" means:** the benchmark ships as four subsets, each a different difficulty setting
 along two independent axes: how many operating conditions the fleet flies under, and how many
@@ -49,7 +52,7 @@ life at every cycle), while test engines are cut off at some arbitrary point bef
 with the true remaining cycles given separately in RUL_FDXXX.txt.
 
 ---
-## Quick start
+## 🚀 Quick start
 
 ```bash
 pip install -r requirements.txt
@@ -74,7 +77,7 @@ cold, fully-recomputed run.
 
 ---
 
-## Layout
+## 📂 Layout
 
 ```
 src/jeh/            the method, imported by BOTH the notebook and the app
@@ -110,7 +113,7 @@ asserts agreement to 1e-9, **and** 100% agreement on the CONTINUE/INSPECT/STOP r
 
 ---
 
-## Leakage controls
+## 🫗 Leakage controls
 
 The core constraint is that the split happens first and everything learned is fitted
 downstream of it.
@@ -153,7 +156,7 @@ Both are reported side by side.
 
 ---
 
-## Cost policy
+## ⚖️ Cost policy
 
 | Term | Value | Meaning |
 |---|---|---|
@@ -178,7 +181,7 @@ Run-to-Failure Simulation*, PHM 2008. Dataset: NASA Ames Prognostics Data Reposi
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Feel free to fork this repository, make your changes, and open a
 pull request.
