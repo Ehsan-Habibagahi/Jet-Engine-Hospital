@@ -60,7 +60,7 @@ pip install -r requirements.txt
 # 1. Unpack the dataset (already done if data/ contains train_FD001.txt)
 #    CMAPSSData.zip goes into data/
 
-# 2. Run the full protocol: 4 subsets, 7 ablations, bonus analyses (about 60-75 min)
+# 2. Run the full protocol: 4 subsets, 7 ablations, advanced analyses (about 60-75 min)
 python -m jeh.run_all              # PYTHONPATH=src, or run from the repo root
 
 # 3. Correctness checks (causality, split disjointness, cost signs, app parity)
@@ -89,7 +89,7 @@ src/jeh/            the method, imported by BOTH the notebook and the app
   evaluation.py     metrics, engine-level bootstrap, lead time, asymmetric cost
   policy.py         the auditable CONTINUE / INSPECT / STOP decision layer
   pipeline.py       run_experiment(): the locked end-to-end protocol
-  experiments.py    cross-subset comparison, ablations, FD004 bonus analyses
+  experiments.py    cross-subset comparison, ablations, FD004 advanced analyses
   plots.py          figures
   run_all.py        driver + result cache
 notebooks/          JetEngineHospital.ipynb
