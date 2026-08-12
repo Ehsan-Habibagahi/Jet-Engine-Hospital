@@ -11,21 +11,19 @@
 </div>
 
 
-A multi-task early-warning system for NASA C-MAPSS turbofan engines. It combines **RUL
-regression** with a calibrated prediction interval, **failure-horizon classification** at
-10/20/30 cycles, **unsupervised anomaly detection**, and a **CONTINUE / INSPECT / STOP**
+A multi-task early-warning system for NASA C-MAPSS turbofan engines. It combines **1.RUL
+regression** with a calibrated prediction interval, **2.failure-horizon classification** at
+10/20/30 cycles, **3.unsupervised anomaly detection**, and a **4.CONTINUE / INSPECT / STOP**
 maintenance policy tuned under an explicit asymmetric cost.
-
-Machine Learning capstone, Shahid Beheshti University, Spring 2026
 
 **[Live dashboard](https://jet-engine-hospital-jeh.streamlit.app)** | **[Full technical report](reports/doc/report.pdf)**
 
 | Stage | Subset | Challenge |
 |---|---|---|
-| 1, Foundation | **FD001** | 1 operating condition, 1 fault mode |
-| 2, Base grade | **FD003** | 1 condition, **2 fault modes** |
-| 2, companion | FD002 | **6 conditions**, 1 fault mode |
-| **Bonus** | **FD004** | **6 conditions + 2 fault modes** |
+| 1. Foundation | FD001 | 1 operating condition, 1 fault mode |
+| 2. Base grade | FD003 | 1 condition, 2 fault modes |
+| 3. Companion | FD002 | 6 conditions, 1 fault mode |
+| 4.Advanced | FD004 | 6 conditions + 2 fault modes |
 
 ---
 ## Dataset Description
