@@ -6,9 +6,7 @@
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Type](https://img.shields.io/badge/type-ML%20capstone-purple)
 
-
-
-<img width="800" height="413" alt="jeh" src="https://github.com/user-attachments/assets/7a454c7f-af66-4ba2-90e7-3d8502a786aa" />
+<img width="800" height="413" alt="jeh" src="https://github.com/user-attachments/assets/146b0ed2-8289-4f6c-97b7-8eb6e9e2eace" />
 
 
 A multi-task early-warning system for NASA C-MAPSS turbofan engines. It combines **RUL
