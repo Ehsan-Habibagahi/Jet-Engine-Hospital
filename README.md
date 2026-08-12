@@ -23,12 +23,12 @@ maintenance policy tuned under an explicit asymmetric cost.
 | 1. Foundation | FD001 | 1 operating condition, 1 fault mode |
 | 2. Base grade | FD003 | 1 condition, 2 fault modes |
 | 3. Companion | FD002 | 6 conditions, 1 fault mode |
-| 4.Advanced | FD004 | 6 conditions + 2 fault modes |
+| 4. Advanced | FD004 | 6 conditions + 2 fault modes |
 
 ---
 ## Dataset Description
 
-What "FDXXX" means: the benchmark ships as four subsets, each a different difficulty setting
+**What "FDXXX" means:** the benchmark ships as four subsets, each a different difficulty setting
 along two independent axes: how many operating conditions the fleet flies under, and how many
 fault modes can occur.
 
@@ -165,7 +165,7 @@ Both are reported side by side.
 `c_miss > c_late > c_early`, as required. Row-level classification thresholds use a matching
 `FN : FP = 20 : 1`, which is why the selected thresholds sit far below 0.50.
 
-Costs are always reported **with their components**; a low average that hides a non-zero miss
+Costs are always reported with their components; a low average that hides a non-zero miss
 rate is not a better system.
 
 ---
@@ -176,7 +176,10 @@ A. Saxena, K. Goebel, D. Simon, N. Eklund, *Damage Propagation Modeling for Airc
 Run-to-Failure Simulation*, PHM 2008. Dataset: NASA Ames Prognostics Data Repository,
 *Turbofan Engine Degradation Simulation Data Set*.
 
-## Scope note
+---
 
-Per the assignment instructions, the written technical report and the Hugging Face Space
-deployment are out of scope. The dashboard runs locally against the exported artifacts.
+## Contributing
+
+Contributions are welcome! Feel free to fork this repository, make your changes, and open a
+pull request.
+
