@@ -8,7 +8,7 @@
 
 
 
-https://github.com/user-attachments/assets/ccd81dd2-f566-44f1-b604-8ea8f518d376
+<img width="800" height="413" alt="jeh" src="https://github.com/user-attachments/assets/7a454c7f-af66-4ba2-90e7-3d8502a786aa" />
 
 
 A multi-task early-warning system for NASA C-MAPSS turbofan engines. It combines **RUL
