@@ -7,7 +7,7 @@
 ![Type](https://img.shields.io/badge/type-ML%20capstone-purple)
 
 <div align="center">
-  <img width="100%" alt="jeh" src="https://github.com/user-attachments/assets/146b0ed2-8289-4f6c-97b7-8eb6e9e2eace" />
+  <img width="100%" alt="jeh" src="https://github.com/user-attachments/assets/89182539-4455-4a97-98f7-36628708a553" />
 </div>
 
 
