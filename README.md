@@ -17,7 +17,7 @@
 A multi-task early-warning system for NASA C-MAPSS turbofan engines. It combines **1.RUL
 regression** with a calibrated prediction interval, **2.failure-horizon classification** at
 10/20/30 cycles, **3.unsupervised anomaly detection**, and a **4.CONTINUE / INSPECT / STOP**
-maintenance policy tuned under an explicit asymmetric cost.
+maintenance policy tuned under an explicit asymmetric cost..
 
 **[Live dashboard](https://jet-engine-hospital-jeh.streamlit.app)** | **[Full technical report](reports/doc/report.pdf)**
 
